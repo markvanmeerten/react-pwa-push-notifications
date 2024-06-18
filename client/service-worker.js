@@ -22,7 +22,7 @@ const saveSubscription = async (subscription) => {
   const response = await fetch("http://localhost:3001/save-subscription", {
     method: "post",
     headers: { "Content-type": "application/json" },
-    body: { user: "user1", subscription: JSON.stringify(subscription) },
+    body: JSON.stringify(subscription),
   });
 
   return response.json();
